@@ -6,9 +6,6 @@
 /out-tsc
 
 
-#environment info
-/src/envirnoments
-
 # dependencies
 /node_modules
 
@@ -44,3 +41,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#environment info
+src/environments
