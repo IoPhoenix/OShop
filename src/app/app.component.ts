@@ -12,11 +12,15 @@ export class AppComponent {
   constructor(private userService: UserService, private auth: AuthService, router: Router) {
     auth.user$.subscribe(user => {
       // navigate logged in user to home page
-      if (user) {
-        userService.save(user);
-        let returnUrl = localStorage.getItem('returnUrl');
-        router.navigateByUrl(returnUrl);
-      }
+      if (!user) return;
+      userService.save(user);
+
+      let returnUrl = localStorage.getItem('returnUrl');
+      if (!returnUrl) return;
+
+      // remove returnUrl to avoid redirection on reload
+      localStorage.removeItem('returnUrl');
+      router.navigateByUrl(returnUrl);          
     });
   }
 }

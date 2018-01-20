@@ -15,5 +15,9 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+  "include": [
+    "src/**/*",
+    "node_modules/angular-4-data-table/src/index.ts"
+  ]
 }
