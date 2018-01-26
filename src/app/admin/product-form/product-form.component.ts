@@ -22,7 +22,7 @@ export class ProductFormComponent implements OnInit {
     private route: ActivatedRoute,
     private productService: ProductService,
     private router: Router) {
-      this.categories$ = categoryService.getCategories();
+      this.categories$ = categoryService.getAll();
 
       this.id = this.route.snapshot.paramMap.get('id');
       // no need to unsubscribe because of take operator
