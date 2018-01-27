@@ -5,3 +5,11 @@
 .card-footer {
     padding: 0;
 }
+
+.card-footer button {
+    cursor: pointer;
+}
+
+.custom-vertical-align {
+    vertical-align: -25%;
+}

@@ -1,6 +1,7 @@
 import { AppUser } from './../models/app-user';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 
 @Component({
@@ -9,11 +10,25 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./bs-navbar.component.css']
 })
 
-export class BsNavbarComponent {
+export class BsNavbarComponent implements OnInit {
   appUser: AppUser;
+  shoppingCartItemCount: number;
 
-  constructor(private auth: AuthService) { 
-    auth.appUser$.subscribe(appUser => this.appUser = appUser);
+  constructor(
+    private auth: AuthService,
+    private shoppingCartService: ShoppingCartService) { }
+
+  async ngOnInit() {
+    this.auth.appUser$.subscribe(appUser => this.appUser = appUser);
+
+    // count total number of items in current shopping cart
+    let cart$ = await this.shoppingCartService.getCart();
+    cart$.subscribe(cart => {
+      this.shoppingCartItemCount = 0;
+      for (let productId in cart.items) {
+        this.shoppingCartItemCount += cart.items[productId].quantity;
+      }
+    });
   }
 
   logout() {
