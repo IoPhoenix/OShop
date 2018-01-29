@@ -1,0 +1,10 @@
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.table td {
+    vertical-align: inherit;
+}
