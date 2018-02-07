@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from './../../product.service';
-import { CategoryService } from './../../category.service';
+import { ProductService } from '../../../shared/services/product.service';
+import { CategoryService } from '../../../shared/services/category.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // quickly take 1 item from observable but don't unsubscribe
