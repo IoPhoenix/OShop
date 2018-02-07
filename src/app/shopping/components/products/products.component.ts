@@ -1,12 +1,12 @@
 import { Subscription } from 'rxjs/Subscription';
-import { ShoppingCartService } from '../shared/services/shopping-cart.service';
-import { Product } from '../shared/models/product';
+import { ShoppingCartService } from '../../../shared/services/shopping-cart.service';
+import { Product } from '../../../shared/models/product';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../shared/services/product.service';
+import { ProductService } from '../../../shared/services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Observable } from 'rxjs/Observable';
-import { ShoppingCart } from '../shared/models/shopping-cart';
+import { ShoppingCart } from '../../../shared/models/shopping-cart';
 
 @Component({
   selector: 'app-products',

@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AdminProductsComponent } from 'app/admin/components/admin-products/admin-products.component';
+import { RouterModule } from '@angular/router';
 import { AdminOrdersComponent } from 'app/admin/components/admin-orders/admin-orders.component';
+import { AdminProductsComponent } from 'app/admin/components/admin-products/admin-products.component';
 import { ProductFormComponent } from 'app/admin/components/product-form/product-form.component';
 import { AdminAuthGuardService } from 'app/admin/services/admin-auth-guard.service';
-import { SharedModule } from 'shared/shared.module';
-import { DataTableModule } from 'angular-4-data-table';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { AuthGuardService } from 'shared/services/auth-guard.service';
+import { SharedModule } from 'shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
     SharedModule,
-    DataTableModule,
     RouterModule.forChild([
       {
         path: 'admin/products/new',

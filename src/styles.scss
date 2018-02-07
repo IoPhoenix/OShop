@@ -1,0 +1,13 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+$primary-color: #5876FC;
+$secondary-color: #4264FF;
+$light-gray: #E8E8E8;
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+body {
+    padding-top: 100px;
+}
