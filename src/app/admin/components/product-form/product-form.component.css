@@ -1,0 +1,7 @@
+.product-form-buttons {
+    display: flex;
+}
+
+.product-form-buttons .btn {
+    flex: 1;
+}

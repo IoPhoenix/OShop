@@ -1,6 +1,6 @@
-
+<h2 class="mb-3">Product Card</h2>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-7">
       <form #f="ngForm" (ngSubmit)="save(f.value)">
           <div class="form-group">
             <label for="title">Title</label>
@@ -33,18 +33,20 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="imageUrl">Image Url</label>
+            <label for="imageUrl">Image Link</label>
             <input  #imageUrl="ngModel" [(ngModel)]="product.imageUrl" required name="imageUrl" id="imageUrl" type="text" class="form-control" url>
             <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
                 <div *ngIf="imageUrl.errors.required">Image url is required.</div>
                 <div *ngIf="imageUrl.errors.url">Please enter a valid url.</div>
               </div>
           </div>
-          <button class="btn btn-primary">Save</button>
-          <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
-        </form>
+          <div class="product-form-buttons">
+              <button class="btn btn-primary mr-2">Save</button>
+              <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
+          </div>
+          </form>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-5">
    <product-card [product]="product" [show-actions]="false"></product-card>
   </div>
 </div>

@@ -1,13 +1,68 @@
 @import '~bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
 
 $primary-color: #5876FC;
 $secondary-color: #4264FF;
+$hover-color: #2543cc;
 $light-gray: #E8E8E8;
+$dark-gray: #343A3F;
 
 .bg-primary {
     background-color: $primary-color !important;
+    border-bottom: 2px solid;
 }
 
 body {
-    padding-top: 100px;
+    padding-top: 120px;
+    background-color: #F7F7F9;
+    background-image: url("assets/images/pattern.png");
+    background-repeat: repeat;
+    font-family: 'PT Serif', serif;
+    padding-bottom: 100px;
+}
+
+.list-group-item.active {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    &:hover {
+        background-color: $hover-color;
+        border-color: $hover-color;
+    }
+}
+
+.btn-primary {
+    background-color:$secondary-color;
+    border-color: $secondary-color;
+    &:hover {
+        background-color: $hover-color;
+        border-color: $hover-color;
+    }
+}
+
+.btn-secondary:hover {
+    background-color: $dark-gray;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.table thead th {
+    background-color: #E6E2EC;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    &:focus, &:hover {
+        color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+data-table .button-panel {
+    display: none !important;
+}
+
+.form-control:focus {
+    border-color: $primary-color;
 }

@@ -1,25 +1,24 @@
-
 <!-- unwrap the observable and save it as cart -->
 <div *ngIf="cart$ | async as cart">
     <h1>Shopping cart</h1>
-    <div>
+    <div class="mb-4">
         <p>
-            You have {{ cart.totalItemsCount }} items in your shopping cart.
+            You have <span class="font-weight-bold">{{ cart.totalItemsCount }}</span> {{ cart.totalItemsCount === 1 ? 'item' : 'items' }} in your shopping cart.
             <button 
             *ngIf="cart.items.length"
             (click)="clearCart()"
-            class="btn btn-light btn-sm">Clear Shopping Cart</button>
+            class="btn btn-sm btn-outline-dark">Clear Shopping Cart</button>
       
         </p>
     </div>
     
     <div class="">
-        <table class="table">
-            <thead  class="thead-light">
+        <table class="table table-light">
+            <thead>
               <tr>
                 <th></th>
                 <th scope="col">Product</th>
-                <th scope="col" class="text-center">Quality</th>
+                <th scope="col" class="text-center">Quantity</th>
                 <th scope="col" class="text-right">Price</th>
               </tr>
             </thead>
@@ -54,5 +53,5 @@
     <a 
       *ngIf="cart.items.length"
       routerLink="/check-out"
-      class="btn btn-primary btn-sm">Check Out</a>
+      class="btn btn-primary btn-md float-right">Check Out <img src="../../assets/images/icon_checkout.png" id="shopping-cart-icon" alt="Shopping cart icon"></a>
  </div>

@@ -8,3 +8,11 @@
 .table td {
     vertical-align: inherit;
 }
+
+.table {
+    background-color: #fff;
+}
+
+img#shopping-cart-icon {
+    vertical-align: text-top;
+}

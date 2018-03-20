@@ -6,6 +6,6 @@
     padding: 0;
 }
 
-.card-footer button {
-    cursor: pointer;
+.card-title {
+    font-weight: bold;
 }

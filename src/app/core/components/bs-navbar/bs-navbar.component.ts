@@ -13,6 +13,7 @@ import { ShoppingCart } from '../../../shared/models/shopping-cart';
 })
 
 export class BsNavbarComponent implements OnInit {
+  public isCollapsed = false;
   appUser: AppUser;
   cart$: Observable<ShoppingCart>;
 

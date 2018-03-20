@@ -27,6 +27,7 @@ import { UserService } from 'shared/services/user.service';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     NgbModule.forRoot(),
+    NgbModule
   ],
   declarations: [
     ProductCardComponent,
